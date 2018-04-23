@@ -11,7 +11,7 @@ from dvc.cloud.gcp import DataCloudGCP
 from dvc.cloud.ssh import DataCloudSSH
 from dvc.cloud.local import DataCloudLOCAL
 from dvc.cloud.base import DataCloudBase, CloudSettings
-
+from dvc.cloud.rsync import DataCloudRsync
 
 class DataCloud(object):
     """ Generic class to do initial config parsing and redirect to proper DataCloud methods """
@@ -20,6 +20,7 @@ class DataCloud(object):
         'aws'   : DataCloudAWS,
         'gcp'   : DataCloudGCP,
         'ssh'   : DataCloudSSH,
+        'rsync' : DataCloudRsync,
         'local' : DataCloudLOCAL,
     }
 
