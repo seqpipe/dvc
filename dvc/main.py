@@ -4,6 +4,12 @@ from dvc.cli import parse_args
 def main(argv=None):
     Logger.init()
 
+    try:
+        import setproctitle  # @UnresolvedImport
+        setproctitle.setproctitle('dvc')
+    except ImportError:
+        pass
+
     args = parse_args(argv)
 
     try:
