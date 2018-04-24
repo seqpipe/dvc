@@ -137,7 +137,7 @@ def parse_args(argv=None):
     parent_cache_parser.add_argument('-j',
                         '--jobs',
                         type=int,
-                        default=8*cpu_count(),
+                        default=2,
                         help='Number of jobs to run simultaneously.')
     parent_cache_parser.add_argument(
                         'targets',
