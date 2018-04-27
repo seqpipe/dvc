@@ -1,13 +1,8 @@
 import os
-import errno
-import filecmp
-import posixpath
 from subprocess import check_output, STDOUT, CalledProcessError
 
 from dvc.logger import Logger
-from dvc.utils import copyfile, file_md5
-from dvc.cloud.base import DataCloudError, DataCloudBase
-from dvc.cloud.aws import create_cb
+from dvc.cloud.base import DataCloudBase
 from dvc.progress import progress
 
 
@@ -47,7 +42,9 @@ class DataCloudRsync(DataCloudBase):
         return check_output(' '.join(args), stderr=STDOUT, shell=True)
 
     def cache_file_key(self, path):
-        relpath = os.path.relpath(os.path.abspath(path), self._cloud_settings.cache.cache_dir)
+        relpath = os.path.relpath(
+            os.path.abspath(path),
+            self._cloud_settings.cache.cache_dir)
         return relpath.replace('\\', '/')
 
     @property
@@ -57,14 +54,14 @@ class DataCloudRsync(DataCloudBase):
     def _in_remote(self, path):
         try:
             return self.remote + ':' + path
-        except:
+        except Exception:
             return path
 
     def _isfile_remote(self, path):
         try:
             self.rsync(self._in_remote(path), dry=True)
             return True
-        except CalledProcessError as exc:
+        except CalledProcessError:
             return False
 
     def _cmp_checksum(self, key, path):
@@ -108,4 +105,3 @@ class DataCloudRsync(DataCloudBase):
         except CalledProcessError as exc:
             Logger.error('Failed to copy "{}": {}'.format(key.path, exc))
             return None
-

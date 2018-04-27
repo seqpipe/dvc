@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import os
 import stat
 import shutil
@@ -18,7 +20,7 @@ from tests.basic_env import TestDvc
 class TestAdd(TestDvc):
     def test(self):
         md5 = file_md5(self.FOO)[0]
-
+        print(md5)
         stage = self.dvc.add(self.FOO)
 
         self.assertIsInstance(stage, Stage)

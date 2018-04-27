@@ -29,6 +29,8 @@ def file_md5(fname):
         with open(fname, "rb") as fobj:
             while True:
                 chunk = fobj.read(LOCAL_CHUNK_SIZE)
+                if not chunk:
+                    break
                 hash_md5.update(chunk)
 
         return (hash_md5.hexdigest(), hash_md5.digest())
