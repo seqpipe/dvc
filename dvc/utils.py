@@ -25,24 +25,10 @@ def file_md5(fname):
     """ get the (md5 hexdigest, md5 digest) of a file """
     if os.path.exists(fname):
         hash_md5 = hashlib.md5()
-        binary = is_binary(fname)
 
-        if binary:
-            mode = "rb"
-        else:
-            mode = "r"
-
-        with open(fname, mode) as fobj:
+        with open(fname, "rb") as fobj:
             while True:
-                data = fobj.read(LOCAL_CHUNK_SIZE)
-                if not data:
-                    break
-
-                if binary:
-                    chunk = data
-                else:
-                    chunk = dos2unix(data)  # .encode('utf-8')
-
+                chunk = fobj.read(LOCAL_CHUNK_SIZE)
                 hash_md5.update(chunk)
 
         return (hash_md5.hexdigest(), hash_md5.digest())
