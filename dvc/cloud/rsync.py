@@ -29,7 +29,7 @@ class DataCloudRsync(DataCloudBase):
         pass
 
     def rsync(self, src, dest='', dry=False):
-        args = ['rsync', '-azP']
+        args = ['rsync', '-aP']
 
         if dry:
             args.append('-n')
