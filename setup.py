@@ -8,6 +8,7 @@ install_requires = [
     "boto3==1.7.4",
     "ply==3.8", #required by google-gax
     "google-compute-engine>=2.4.1", #required by boto
+    "google-cloud-storage>=1.14.0",
     "configparser>=3.5.0",
     "zc.lockfile>=1.2.1",
     "future>=0.16.0",
