@@ -11,6 +11,7 @@ install_requires = [
     "google-cloud-storage==1.11",
     "google-cloud==0.24.0",
     "google-cloud-core==0.28",
+    "google-api-core==0.1",
     "configparser==3.5.0",
     "zc.lockfile>=1.2.1",
     "future>=0.16.0",
