@@ -9,11 +9,11 @@ install_requires = [
     "ply==3.8", #required by google-gax
     "google-compute-engine==2.4.1", #required by boto
     "google-cloud-storage==1.11",
+    "google-cloud==0.24.0",
+    "google-cloud-core==0.28",
     "configparser==3.5.0",
     "zc.lockfile>=1.2.1",
     "future>=0.16.0",
-    "google-cloud==0.24.0",
-    "google-cloud-core==0.24",
     "colorama>=0.3.9",
     "configobj>=5.0.6",
     "networkx>=1.11",
