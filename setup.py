@@ -9,7 +9,7 @@ install_requires = [
     "ply==3.8", #required by google-gax
     "google-compute-engine==2.4.1", #required by boto
     "google-cloud-storage==1.1",
-    "google-cloud==0.24.0",
+    "google-cloud==0.34.0",
     "google-cloud-core==0.24.1",
     "google-api-core==0.1.1",
     "google-auth==1.2.1",
