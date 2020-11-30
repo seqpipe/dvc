@@ -13,7 +13,7 @@ install_requires = [
     "google-cloud-core==0.24.1",
     "google-api-core==0.1.1",
     "google-auth==1.2.1",
-    "google-cloud-error-reporting==0.30.1",
+    "google-cloud-error-reporting==0.25.1",
     "configparser==3.5.0",
     "zc.lockfile>=1.2.1",
     "future>=0.16.0",
