@@ -1,7 +1,7 @@
 boto3==1.7.4
 ply==3.8 # required by google-gax
-google-api-core==1.19
-google-auth==1.11
+google-api-core==1.7
+google-auth==1.5
 google-compute-engine==2.4 #required by boto
 google-cloud-core==1.0
 google-cloud==0.34.0
