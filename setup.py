@@ -19,7 +19,7 @@ install_requires = [
     "pyyaml>=3.12",
     "gitpython>=2.1.8",
     "ntfsutils>=0.1.4",
-    "setuptools==34.0.0",
+    "setuptools>=34.0.0",
     "nanotime>=0.5.2",
     "pyasn1>=0.4.1",
     "schema>=0.6.7",
