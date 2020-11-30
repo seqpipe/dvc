@@ -1,11 +1,11 @@
 boto3==1.7.4
 ply==3.8 # required by google-gax
-google-compute-engine>=2.4.1 #required by boto
-google-cloud-storage>=1.14.0
+google-compute-engine==2.4 #required by boto
+google-cloud-storage==1.14
 configparser>=3.5.0
 zc.lockfile>=1.2.1
 future>=0.16.0
-google-cloud>=0.24.0
+google-cloud==0.24
 PyInstaller>=3.2.1
 colorama>=0.3.9
 configobj>=5.0.6
@@ -17,7 +17,7 @@ setuptools>=34.0.0
 nanotime>=0.5.2
 pyasn1>=0.4.1
 schema>=0.6.7
-paramiko>=2.4.1
+paramiko==2.4
 binaryornot==0.4.4
 jsonpath-rw==1.4.0
 setproctitle>=1.1.10
