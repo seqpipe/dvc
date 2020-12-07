@@ -26,6 +26,11 @@ class CmdBase(object):
             if os.path.isdir(dvc_dir):
                 return root
             root = os.path.dirname(root)
+
+        dvc_dir = os.path.join(root, Project.DVC_DIR)
+        if os.path.isdir(dvc_dir):
+            return root
+
         msg = "Not a dvc repository (checked up to mount point {})"
         raise DvcException(msg.format(root))
 
